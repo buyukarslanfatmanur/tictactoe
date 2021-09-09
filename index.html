@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>TicTacToe</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="css/xox.css">
+     </head>
+    <body> 
+      <div class="container h-100">
+        <div class="row header" >
+          <div class="col-1 dropdown" >
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              PLAYER
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="btn dropdown-item" href="#" onclick= "restart_button()">Player X - Player O</a></li>
+              <li><a class="btn dropdown-item" id="playerC" href="#" onclick= "playerComputer()">Player X - Computer</a></li>            
+            </ul>
+         </div>
+          <div class="col-10 header"><h1 class="d-flex align-items-center justify-content-center" ><b>TicTacToe</b></h1></div>
+        </div>
+
+        <div class= "row gamearea" style="padding-top: 10px; padding-bottom: 10px;">   
+            <div  class="btn-group" role="group" aria-label="Basic outlined example" >
+                <button type="button" id="0" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+                <button type="button" id="1" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+                <button type="button" id="2" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+            </div> 
+            <div  class="btn-group" role="group" aria-label="Basic outlined example"> 
+                <button type="button" id="3" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+                <button type="button" id="4" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+                <button type="button" id="5" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+            </div> 
+            <div  class="btn-group" role="group" aria-label="Basic outlined example"> 
+                <button type="button" id="6" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+                <button type="button" id="7" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+                <button type="button" id="8" class="btn btn-outline-light btn-sm action-button"><span> </span></button>
+            </div>
+        </div>
+
+        <div class= "row col-6 mx-auto">
+          <button id="restart" type="button" class="col btn btn-outline-dark" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif " onclick="restart_button()">RESTART</button>
+        </div>
+
+        <div class= "row scorearea">   
+          <div class="col-6 score-info d-flex align-items-center justify-content-center" style="float: left;">
+            <label class="mx-3">Player X:</label>
+            <label id="score1" class="mx-3">0</label></div>
+          <div class="col-6 score-info d-flex align-items-center justify-content-center" id="changecomp" style="float: right;">
+            <label id="opponent" class="mx-3">Player O:</label>
+            <label id="score2" class="mx-3">0</label></div>
+        </div>   
+      </div>      
+
+      <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="resultModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <p class="end fst-italic fw-bold fs-5 m-5 p-1"></p>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" onclick="continue_button()" id= "myModal" data-bs-dismiss="modal">CONTINUE</button>
+                  <button class="btn btn-info text-white" type="button"  onclick="restart_button()">NEW GAME</button>
+              </div>
+          </div>
+      </div>
+      </div>
+    </body>
+        <script src="js/xoxgame.js"></script>
+    </html>
+    

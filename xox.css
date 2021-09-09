@@ -1,0 +1,50 @@
+body{
+    height: 100vh;
+    background-color:rgb(243, 234, 222);
+  }
+
+  .header{
+    height: 10%;
+    text-align:center;
+    font-size:368x;
+    color:rgb(35, 40, 46);
+    margin:5px;
+    padding:8px;
+    font-family: Cambria, Cochin, Georgia, serif;
+  }
+  .gamearea{
+    height:76% ;
+    background-color:rgb(124, 58, 58);
+    color:black;
+    margin:0 2px 0 2px;
+  }
+  .scorearea{
+    height:10% ;
+    background-color: lightpink;
+    font-size: 20px;
+    text-align:justify;
+    margin:auto;
+  }
+  .action-button{
+    font-size:80px !important;
+    flex: 1 !important;
+  }
+
+  .win-button{
+    background-color: cornflowerblue !important ;
+  }
+
+  .gamearea .btn-group {
+    display: flex;
+    height: 33.4%;
+  }
+
+  .win-massage{
+    width: 40%;
+    height:10% ;
+    background-color: olivedrab;
+    font-size:40px ;
+    color:rgb(243, 234, 222) ;
+    text-align:center;
+    margin:auto;
+  }
